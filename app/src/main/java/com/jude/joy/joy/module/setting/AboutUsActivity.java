@@ -7,7 +7,6 @@ import com.jude.beam.bijection.RequiresPresenter;
 import com.jude.beam.expansion.BeamBaseActivity;
 import com.jude.joy.R;
 import com.jude.utils.JUtils;
-import com.umeng.analytics.MobclickAgent;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -28,15 +27,6 @@ public class AboutUsActivity extends BeamBaseActivity<AboutUsPresenter> {
         setContentView(R.layout.activity_about);
         ButterKnife.bind(this);
         version.setText("v"+ JUtils.getAppVersionName());
-    }
-
-    public void onResume() {
-        super.onResume();
-        MobclickAgent.onResume(this);
-    }
-    public void onPause() {
-        super.onPause();
-        MobclickAgent.onPause(this);
     }
 
 

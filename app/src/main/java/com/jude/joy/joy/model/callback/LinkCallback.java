@@ -6,13 +6,13 @@ import com.jude.http.RequestListener;
 /**
  * Created by Mr.Jude on 2015/6/13.
  */
-class LinkCallback implements RequestListener {
-    private com.jude.joy.model.callback.LinkCallback link;
-    public com.jude.joy.model.callback.LinkCallback add(com.jude.joy.model.callback.LinkCallback other){
+public class LinkCallback implements RequestListener {
+    private LinkCallback link;
+    public LinkCallback add(LinkCallback other){
         other.setLink(this);
         return other;
     }
-    private void setLink(com.jude.joy.model.callback.LinkCallback link){
+    private void setLink(LinkCallback link){
         this.link = link;
     }
 

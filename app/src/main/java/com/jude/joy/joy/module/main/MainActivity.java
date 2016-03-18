@@ -19,8 +19,6 @@ import com.jude.joy.module.image.ImageJoyFragment;
 import com.jude.joy.module.main.MainPresenter;
 import com.jude.joy.module.setting.AboutUsActivity;
 import com.jude.joy.module.text.TextJoyFragment;
-import com.umeng.analytics.MobclickAgent;
-import com.umeng.update.UmengUpdateAgent;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -40,7 +38,6 @@ public class MainActivity extends BeamBaseActivity<MainPresenter> {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        UmengUpdateAgent.forceUpdate(this);
         setContentView(R.layout.activity_main);
         getSupportActionBar().setTitle("豆逼  —  给你纯粹的欢乐");
         ButterKnife.bind(this);
@@ -105,13 +102,4 @@ public class MainActivity extends BeamBaseActivity<MainPresenter> {
 
         return super.onOptionsItemSelected(item);
     }
-    public void onResume() {
-        super.onResume();
-        MobclickAgent.onResume(this);
-    }
-    public void onPause() {
-        super.onPause();
-        MobclickAgent.onPause(this);
-    }
-
 }

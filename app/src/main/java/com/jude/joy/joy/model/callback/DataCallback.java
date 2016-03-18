@@ -12,7 +12,7 @@ import java.lang.reflect.ParameterizedType;
 /**
  * Created by zhuchenxi on 15/5/11.
  */
-public abstract class DataCallback<T> extends com.jude.joy.model.callback.LinkCallback {
+public abstract class DataCallback<T> extends LinkCallback {
 
     @Override
     public void onRequest() {
